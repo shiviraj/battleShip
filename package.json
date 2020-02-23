@@ -1,0 +1,32 @@
+{
+  "name": "battleShip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js",
+    "dev": "nodemon server.js -e .js,.html,.json,.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiviraj/battleShip.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiviraj/battleShip/issues"
+  },
+  "homepage": "https://github.com/shiviraj/battleShip#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "mocha": "^7.0.1"
+  }
+}
