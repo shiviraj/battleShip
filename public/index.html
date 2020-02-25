@@ -10,30 +10,29 @@
     <div class="card">
       <div class="card-title">Battle Ship</div>
       <div class="buttons" id="main">
-        <div class="btn center" id="play-game">Play Game</div>
+        <div class="btn center" id="host-game">Host Game</div>
+        <div class="btn center" id="join-game">Join Game</div>
         <div class="btn center" id="about-game">About Game</div>
         <div class="btn center" id="settings">Settings</div>
       </div>
-      <div class="buttons hidden" id="host-join">
-        <div class="btn center" id="host-game">Host Game</div>
-        <div class="btn center" id="join-game">Join Game</div>
-        <div class="btn center" id="back">Back</div>
-      </div>
-      <div class="host-game hidden" id="host-game-form">
-        <form action="hostGame" method="post" class="game-form">
+      <div class="host-game hidden" id="host-form">
+        <form action="hostGame" method="post" class="form">
           <label for="username">
             Username: <span class="required-input">*</span>
           </label>
           <input type="text" name="username" id="username" required />
+          <input
+            type="submit"
+            class="submit btn center"
+            id="host"
+            value="Host Game"
+          />
         </form>
-        <div class="action">
-          <div class="btn center" id="back">Back</div>
-          <div class="btn center" id="host">Host Game</div>
-        </div>
+        <div class="btn center back" id="back">Back</div>
       </div>
 
-      <div class="join-game hidden" id="join-game-form">
-        <form action="joinGame" method="post" class="game-form">
+      <div class="join-game hidden" id="join-form">
+        <form action="joinGame" method="post" class="form">
           <label for="gameId">
             Game Id: <span class="required-input">*</span>
           </label>
@@ -42,11 +41,14 @@
             Username: <span class="required-input">*</span>
           </label>
           <input type="text" name="username" id="username" required />
+          <input
+            type="submit"
+            class="submit btn center"
+            id="join"
+            value="Join Game"
+          />
         </form>
-        <div class="action">
-          <div class="btn center" id="back">Back</div>
-          <div class="btn center" id="join">Join Game</div>
-        </div>
+        <div class="btn center back" id="back">Back</div>
       </div>
     </div>
     <div class="hidden" id="settings">
@@ -77,6 +79,7 @@
             d="M200 100c0-30.3-13.5-57.5-34.8-75.8 -4.8-4.1-12.2-3-15.8 2.3v0c-3 4.5-2.4 10.7 1.8 14.2 16.6 14.4 27.1 35.6 27.1 59.3s-10.5 44.9-27.1 59.3c-4.1 3.6-4.8 9.7-1.8 14.2v0c3.6 5.3 11 6.4 15.8 2.3C186.5 157.5 200 130.3 200 100z"
           />
           <path
+            class="loader"
             d="M156.7 100c0-14.9-5.8-28.5-15.2-38.6 -4.6-4.9-12.6-4.1-16.3 1.4l-0.4 0.6c-2.8 4.1-2.2 9.5 1.2 13.2 5.7 6.2 9.1 14.4 9.1 23.5 0 9-3.4 17.3-9.1 23.5 -3.3 3.7-3.9 9-1.2 13.2l0.4 0.6c3.7 5.6 11.7 6.3 16.3 1.4C150.9 128.5 156.7 114.9 156.7 100z"
           />
         </svg>
@@ -91,7 +94,6 @@
         </div>
       </div>
     </div>
-
     <script src="./js/style.js"></script>
   </body>
 </html>
