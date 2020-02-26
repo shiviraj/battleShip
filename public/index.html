@@ -16,11 +16,11 @@
         <div class="btn center" id="settings">Settings</div>
       </div>
       <div class="host-game hidden" id="host-form">
-        <form action="hostGame" method="post" class="form">
+        <form class="form">
           <label for="username">
             Username: <span class="required-input">*</span>
           </label>
-          <input type="text" name="username" id="username" required />
+          <input type="text" id="username" required />
           <input
             type="submit"
             class="submit btn center"
@@ -36,11 +36,11 @@
           <label for="gameId">
             Game Id: <span class="required-input">*</span>
           </label>
-          <input type="text" name="gameId" id="game-id" required />
+          <input type="text" id="game-id" required />
           <label for="username">
             Username: <span class="required-input">*</span>
           </label>
-          <input type="text" name="username" id="username" required />
+          <input type="text" id="username" required />
           <input
             type="submit"
             class="submit btn center"
@@ -85,13 +85,8 @@
         </svg>
       </div>
       <div class="waiting-container">
-        <div class="game-id center">
-          Game ID: <span id="game-id">12345</span>
-        </div>
-        <div class="joined-player">
-          <span class="player">Player 1</span>
-          <span class="player">Player 2</span>
-        </div>
+        <div class="game-id center">Game ID: <span id="game-id"></span></div>
+        <div class="joined-player"></div>
       </div>
     </div>
     <script src="./js/style.js"></script>
