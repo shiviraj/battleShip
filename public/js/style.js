@@ -59,7 +59,9 @@ const hostGame = function() {
   const $hostForm = getElement('#host-form');
   $hostForm.addEventListener('submit', event => {
     event.preventDefault();
-    const username = getElement('#host-form #username').value;
+    const $username = getElement('#host-form #username');
+    const username = $username.value;
+    $username.value = '';
     if (!username) return;
     const options = {
       method: 'POST',
